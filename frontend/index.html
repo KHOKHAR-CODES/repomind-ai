@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a0a0f"><meta name="description" content="Cyberpunk codebase intelligence with Repo Mind AI.">
+<title>REPO MIND // CODEBASE INTELLIGENCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css"><script>window.REPOMIND_API_BASE=window.REPOMIND_API_BASE||"https://repomind-backend.railway.app";</script><script src="./script.js" defer></script>
+<script src="./light-rays.js" defer></script>
+</head><body>
+<div class="scanlines" aria-hidden="true"></div>
+<a class="skip-link" href="#main-content">SKIP_TO_CONTENT</a>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+<a class="brand" href="#overview" aria-label="Repo Mind AI home">
+<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="m18 3 13 7.3v15.4L18 33 5 25.7V10.3L18 3Z"/><path d="m12 13 6-3.4 6 3.4v7l-6 5.3-6-5.3v-7Z"/><path d="M18 9.6V25"/></svg></span>
+<span class="brand-name">REPO_MIND<span>//AI</span><small>TERMINAL_v4.8</small></span>
+</a>
+<div class="sidebar-label">SYS_NAVIGATE</div>
+<nav class="primary-nav" aria-label="Workspace">
+<a class="nav-link active" href="#overview" data-nav><span class="nav-icon" aria-hidden="true">&gt;</span>OVERVIEW</a>
+<a class="nav-link" href="#repositories" data-nav><span class="nav-icon" aria-hidden="true">&gt;</span>REPOSITORIES<span id="nav-repo-count" class="nav-count"></span></a>
+<a class="nav-link" href="#ask" data-nav><span class="nav-icon" aria-hidden="true">&gt;</span>ASK_AI</a>
+<a class="nav-link" href="#conversations" data-nav><span class="nav-icon" aria-hidden="true">&gt;</span>CONVERSATIONS</a>
+</nav>
+<div class="sidebar-label conversation-label">LOGGED_CHATS</div>
+<div id="conversation-list" class="conversation-list" aria-live="polite"><p class="sidebar-hint">AUTHENTICATION REQUIRED FOR LOGS.</p></div>
+<div class="sidebar-spacer"></div>
+<a class="nav-link help-link" href="#about" data-nav><span class="nav-icon" aria-hidden="true">&gt;</span>DOCS // HOW IT WORKS</a>
+<div class="account-card">
+<div id="user-avatar" class="avatar" aria-hidden="true">G</div>
+<div class="account-copy"><strong id="account-name">GUEST_USER</strong><span id="account-subtitle">DISCONNECTED</span></div>
+<button id="account-button" class="icon-button account-action" type="button" aria-label="Sign in">↗</button>
+</div>
+</aside>
+<button class="mobile-scrim" id="mobile-scrim" type="button" aria-label="Close navigation" hidden></button>
+<main class="main-area" id="main-content">
+<header class="topbar">
+<div class="topbar-leading">
+<button id="menu-button" class="icon-button mobile-menu" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+<div class="breadcrumb"><span>SYS</span><span aria-hidden="true">/</span><strong id="breadcrumb-page">OVERVIEW</strong></div>
+</div>
+<div class="topbar-actions">
+<span id="api-status" class="api-pill" role="status"><i></i> PINGING_API</span>
+<button id="top-add-button" class="button button-primary" type="button"><span aria-hidden="true">＋</span> CONNECT_REPO</button>
+<button id="auth-button" class="button button-quiet" type="button">AUTH_LOGIN</button>
+</div>
+</header>
+<div class="page-content">
+<section class="welcome-panel" id="overview" aria-labelledby="welcome-title">
+<div class="welcome-copy">
+<div class="eyebrow"><span class="eyebrow-rule"></span> NEURAL CODEBASE FEED // SECURE_SOCKET</div>
+<h1 id="welcome-title" class="cyber-glitch" data-text="DECODE YOUR CODEBASE.">DECODE YOUR<br><span>CODEBASE.</span></h1>
+<p>Synchronize your GitHub repositories into high-dimensional vector memory. Query raw code structures with zero latency.</p>
+<div class="welcome-actions">
+<button id="welcome-add-button" class="button button-primary" type="button">INITIALIZE REPO <span aria-hidden="true">↗</span></button>
+<a class="text-link" href="#ask">QUERY TERMINAL <span aria-hidden="true">↓</span></a>
+</div>
+</div>
+<div class="welcome-art" aria-hidden="true">
+<div class="art-ring ring-one"></div>
+<div class="art-ring ring-two"></div>
+<div class="art-core"><span>R</span><i>●</i></div>
+<span class="art-node node-one">{R}</span><span class="art-node node-two">⌘</span><span class="art-node node-three">⚡</span>
+</div>
+</section>
+<section class="stats-grid" aria-label="Workspace statistics">
+<article class="stat-card">
+<div class="stat-label">REPOSITORIES<span class="stat-icon">⌘</span></div>
+<strong id="stat-repos" class="stat-value">—</strong>
+<span class="stat-caption">SYNCED_NODES</span>
+</article>
+<article class="stat-card">
+<div class="stat-label">FILES_PARSED<span class="stat-icon">▤</span></div>
+<strong id="stat-files" class="stat-value">—</strong>
+<span class="stat-caption">INDEXER_STREAM</span>
+</article>
+<article class="stat-card">
+<div class="stat-label">VEC_CHUNKS<span class="stat-icon">⌗</span></div>
+<strong id="stat-chunks" class="stat-value">—</strong>
+<span class="stat-caption">CHROMA_EMBEDDINGS</span>
+</article>
+<article class="stat-card">
+<div class="stat-label">SESSIONS<span class="stat-icon">◷</span></div>
+<strong id="stat-chats" class="stat-value">—</strong>
+<span class="stat-caption">LOGGED_CONVERSATIONS</span>
+</article>
+</section>
+<section class="section-block" id="repositories" aria-labelledby="repositories-title">
+<div class="section-heading">
+<div>
+<div class="eyebrow">ACTIVE_REPOSITORIES</div>
+<h2 id="repositories-title">REPOS <span id="repo-count-label" class="heading-count"></span></h2>
+<p>Manage connected Git remotes and real-time indexing status.</p>
+</div>
+<button id="refresh-button" class="button button-outline" type="button"><span aria-hidden="true">↻</span> REFRESH_NODES</button>
+</div>
+<div id="page-notice" class="notice" role="status" hidden></div>
+<form id="add-repo-form" class="add-panel" hidden>
+<div class="form-title">
+<div class="form-icon" aria-hidden="true">↗</div>
+<div><h3>CONNECT_REPOSITORY</h3><p>Input public GitHub HTTPS endpoint. Automated clone and vector embedding.</p></div>
+<button class="icon-button close-form" id="close-add" type="button" aria-label="Close form">×</button>
+</div>
+<div class="form-grid">
+<label class="field-label" for="repo-url">GITHUB_URL<input id="repo-url" name="repo_url" type="url" placeholder="https://github.com/owner/repository" autocomplete="url" required></label>
+<label class="field-label branch-field" for="repo-branch">BRANCH<input id="repo-branch" name="branch" type="text" value="main" maxlength="255" placeholder="main"></label>
+<button class="button button-primary submit-add" id="add-submit" type="submit">CLONE &amp; INDEX <span aria-hidden="true">↗</span></button>
+</div>
+<p class="form-footnote">SECURE PROTOCOL: PUBLIC REPOSITORIES ONLY.</p>
+</form>
+<div id="repo-list" class="repository-grid" aria-live="polite">
+<div class="skeleton-card" aria-label="Loading repositories"></div><div class="skeleton-card" aria-hidden="true"></div>
+</div>
+</section>
+<section class="ask-section" id="ask" aria-labelledby="ask-title">
+<div class="ask-intro">
+<div class="eyebrow eyebrow-light">NEURAL_QUERY_ENGINE</div>
+<h2 id="ask-title">QUERY<br>THE MATRIX.</h2>
+<p>Direct semantic search across your indexed codebase with strict file-path citation and zero hallucination boundaries.</p>
+<div class="ask-note"><span aria-hidden="true">✳</span><span>Context retrieved via vector similarity search. Verify citations directly in source files.</span></div>
+</div>
+<div class="ask-workspace">
+<div class="ask-card-head">
+<div class="ask-badge" aria-hidden="true">✳</div>
+<div><h3>REPO_MIND_TERMINAL</h3><p id="ask-context-label">SELECT A REPOSITORY TO ENGAGE</p></div>
+<span class="online-pill"><i></i> READY</span>
+</div>
+<div class="starter-prompts" aria-label="Suggested questions">
+<button type="button" class="starter-chip">&gt; Explain this repository's architecture</button>
+<button type="button" class="starter-chip">&gt; Where is authentication implemented?</button>
+<button type="button" class="starter-chip">&gt; How does the API request flow work?</button>
+<button type="button" class="starter-chip">&gt; How do I run this project locally?</button>
+</div>
+<form id="ask-form">
+<label class="field-label" for="ask-repo">TARGET_REPOSITORY<select id="ask-repo" required><option value="">SELECT REPOSITORY</option></select></label>
+<label class="field-label" for="ask-query">PROMPT_QUERY<textarea id="ask-query" rows="4" maxlength="4000" placeholder="Ask about architecture, functions, or data flows..." required></textarea></label>
+<div class="ask-form-bottom"><span class="muted-hint">[ENTER] TO TRANSMIT · [SHIFT+ENTER] NEWLINE</span><button class="button button-primary" id="ask-submit" type="submit">TRANSMIT QUERY <span aria-hidden="true">↑</span></button></div>
+</form>
+<div id="ask-result" class="ask-result" aria-live="polite" aria-relevant="additions text"></div>
+</div>
+</section>
+<section class="section-block conversations-section" id="conversations" aria-labelledby="conversations-title">
+<div class="section-heading">
+<div>
+<div class="eyebrow">ARCHIVED_LOGS</div>
+<h2 id="conversations-title">CONVERSATION_HISTORY</h2>
+<p>Resume previous query sessions across repositories.</p>
+</div>
+<button id="new-chat-button" class="button button-outline" type="button">＋ NEW_SESSION</button>
+</div>
+<div id="conversation-cards" class="conversation-cards" aria-live="polite">
+<div class="empty-state compact-empty"><span class="empty-symbol">◷</span><p>AUTHENTICATE TO VIEW CONVERSATION LOGS.</p></div>
+</div>
+</section>
+<section class="how-section" id="about">
+<div class="section-heading"><div><div class="eyebrow">SYSTEM_PROTOCOL</div><h2>From Git Remote to Neural Understanding.</h2></div></div>
+<div class="steps-grid">
+<article class="step-card"><span class="step-number">01</span><div class="step-icon" aria-hidden="true">↗</div><h3>CONNECT</h3><p>Authenticate and supply public GitHub HTTPS repository URLs.</p></article>
+<article class="step-card"><span class="step-number">02</span><div class="step-icon" aria-hidden="true">⌗</div><h3>INDEX</h3><p>Files are chunked, embedded, and stored in high-performance vector databases.</p></article>
+<article class="step-card"><span class="step-number">03</span><div class="step-icon" aria-hidden="true">✳</div><h3>QUERY</h3><p>Ask natural language questions and receive precise code citations.</p></article>
+</div>
+</section>
+<footer class="footer">
+<a class="brand footer-brand" href="#overview">
+<span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="m18 3 13 7.3v15.4L18 33 5 25.7V10.3L18 3Z"/><path d="m12 13 6-3.4 6 3.4v7l-6 5.3-6-5.3v-7Z"/></svg></span>
+<span class="brand-name">REPO_MIND<span>//AI</span><small>TERMINAL_v4.8</small></span>
+</a>
+<span>SECURE_CODEBASE_INTELLIGENCE // ALL RIGHTS RESERVED.</span>
+<a href="#overview">TOP_OF_PAGE ↑</a>
+</footer>
+</div>
+</main>
+</div>
+<dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-heading">
+<div class="dialog-inner">
+<button class="icon-button modal-close" id="auth-close" type="button" aria-label="Close dialog">×</button>
+<div class="modal-brand" aria-hidden="true">⌘</div>
+<div class="eyebrow">SECURE_GATEWAY</div>
+<h2 id="auth-heading">AUTHENTICATION.</h2>
+<p class="modal-copy" id="auth-description">Enter credentials to access private workspace.</p>
+<div class="auth-tabs"><button type="button" id="btn-login" class="auth-tab active" aria-pressed="true">SIGN_IN</button><button type="button" id="btn-signup" class="auth-tab" aria-pressed="false">REGISTER</button></div>
+<form id="auth-form">
+<label class="field-label" id="username-label" for="auth-username" hidden>HANDLE<input id="auth-username" type="text" autocomplete="username" minlength="3" maxlength="64" placeholder="operator_handle"></label>
+<label class="field-label" for="auth-email">EMAIL_ADDRESS<input id="auth-email" type="email" autocomplete="email" maxlength="255" placeholder="operator@network.net" required></label>
+<label class="field-label" for="auth-password">ACCESS_KEY<input id="auth-password" type="password" autocomplete="current-password" minlength="8" maxlength="72" placeholder="••••••••••••" required></label>
+<button class="button button-primary modal-submit" id="auth-submit-btn" type="submit">AUTHENTICATE ↗</button>
+</form>
+<div id="auth-msg" class="auth-message" role="status" aria-live="polite"></div>
+<p class="privacy-note">ENCRYPTED CONNECTION // ZERO KNOWLEDGE.</p>
+</div>
+</dialog>
+<div id="toast-region" class="toast-region" aria-live="polite" aria-relevant="additions"></div>
+</body></html><script type="module" src="./light-rays.js" defer></script>

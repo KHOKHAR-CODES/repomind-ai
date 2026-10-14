@@ -1,0 +1,16 @@
+# Repomind AI — Frontend (Static Site / Railway Deploy)
+service = frontend
+
+[build]
+  builder = nixpacks
+  # Static site — no build step required
+
+[deploy]
+  startCommand = "python -m http.server $PORT --directory ."
+  healthcheckPath = "/"
+  healthcheckTimeout = 10
+  restartPolicyType = "on_failure"
+  restartPolicyMaxRetries = 3
+
+[env]
+  # Static site served separately; set CORS origin on backend
