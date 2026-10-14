@@ -1,6 +1,3 @@
-# Repomind AI Backend — Railway deploy config
-# Service name: backend
-
 [build]
 builder = "nixpacks"
 buildCommand = "pip install -r requirements.txt"

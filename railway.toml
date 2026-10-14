@@ -1,34 +1,17 @@
-# Root railway.toml - Multi-service reference for Railway
-# Deploy from:lec_26/repomind-ai (this folder)
-# Backend service deploys from backend/ subfolder
-# Frontend service deploys from frontend/ subfolder
+# Root railway.toml - Railway build configuration
 
-service = backend
 [build]
-  builder = nixpacks
-  buildCommand = "pip install -r backend/requirements.txt"
+builder = "nixpacks"
+buildCommand = "pip install -r backend/requirements.txt"
 
 [deploy]
-  startCommand = "uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
-  healthcheckPath = "/api/health"
-  healthcheckTimeout = 10
-  restartPolicyType = on_failure
-  restartPolicyMaxRetries = 3
+startCommand = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 10
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
 
 [env]
-  DATABASE_URL = "postgresql://..."
-  PYTHONPATH = "."
-  ENVIRONMENT = "production"
-
----
-# Frontend static service
-service = frontend
-[build]
-  builder = nixpacks
-
-[deploy]
-  startCommand = "python -m http.server $PORT --directory frontend"
-  healthcheckPath = "/"
-  healthcheckTimeout = 10
-  restartPolicyType = on_failure
-  restartPolicyMaxRetries = 3
+DATABASE_URL = "postgresql://..."
+PYTHONPATH = "backend"
+ENVIRONMENT = "production"
