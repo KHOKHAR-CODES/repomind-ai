@@ -11,7 +11,7 @@ restartPolicyMaxRetries = 3
 
 [env]
 DATABASE_URL = "postgresql://..."
-PYTHONPATH = "/app"
+PYTHONPATH = "/app/backend"
 ENVIRONMENT = "production"
 LLM_API_KEY = ""
 JWT_SECRET_KEY = ""
